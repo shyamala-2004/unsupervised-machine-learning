@@ -62,10 +62,7 @@ X = df[[
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-
-# ==============================
 # K-MEANS CLUSTERING
-# ==============================
 
 kmeans = KMeans(n_clusters=3, random_state=42, n_init=10)
 clusters = kmeans.fit_predict(X_scaled)
@@ -74,9 +71,7 @@ print("K-Means Silhouette Score:",
       silhouette_score(X_scaled, clusters))
 
 
-# ==============================
 # HIERARCHICAL CLUSTERING
-# ==============================
 
 hierarchical = AgglomerativeClustering(n_clusters=3)
 h_clusters = hierarchical.fit_predict(X_scaled)
@@ -85,9 +80,7 @@ print("Hierarchical Silhouette Score:",
       silhouette_score(X_scaled, h_clusters))
 
 
-# ==============================
 # PCA DIMENSIONALITY REDUCTION
-# ==============================
 
 pca = PCA(n_components=2)
 X_pca = pca.fit_transform(X_scaled)
@@ -99,10 +92,7 @@ plt.title("K-Means Clusters")
 plt.show()
 
 
-# ==============================
 # MODEL EVALUATION
-# ==============================
-
 # Create classification target
 # 1 = rating >= 4, 0 = rating < 4
 y = (df["rating"] >= 4).astype(int)
@@ -131,10 +121,7 @@ print("ROC-AUC  :", roc_auc_score(y, prob))
 print("\nConfusion Matrix:")
 print(confusion_matrix(y, pred))
 
-
-# ==============================
 # HYPERPARAMETER TUNING
-# ==============================
 
 params = {
     "C": [0.01, 0.1, 1, 10]
