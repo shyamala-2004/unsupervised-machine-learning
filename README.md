@@ -1,6 +1,6 @@
-unsupervised-machine-learning
+**unsupervised-machine-learning**
 
-1. Project Overview
+**1. Project Overview**
 
 This project focuses on applying unsupervised machine learning techniques and evaluating machine learning models using the Amazon Product Dataset.
 
@@ -8,7 +8,7 @@ K-Means and Hierarchical Clustering are used to identify groups of similar produ
 
 Classification evaluation techniques are also demonstrated using Logistic Regression.
 
-2. Objectives
+**2. Objectives**
 
 - Understand K-Means clustering.
 - Implement Hierarchical Clustering.
@@ -22,7 +22,7 @@ Classification evaluation techniques are also demonstrated using Logistic Regres
 
 ---
 
-3. Dataset
+**3. Dataset**
 
  Amazon Product Dataset
 
@@ -36,7 +36,7 @@ The dataset contains Amazon product information such as:
 - Product rating
 - Rating count
 
-4. Features Used
+**4. Features Used**
 
 The following numerical features were selected for machine learning:
 
@@ -53,22 +53,20 @@ Scikit-learn
 Matplotlib
 Seaborn
 
-5.Machine Learning Techniques
+**5.Machine Learning Techniques**
 
 1. K-Means Clustering
 
 K-Means was used to divide the products into 3 clusters.
 
-Silhouette Score:
+Silhouette Score:0.6372
 
-0.6372
 2. Hierarchical Clustering
 
 Agglomerative Hierarchical Clustering was performed with 3 clusters.
 
-Silhouette Score:
+Silhouette Score:0.3880
 
-0.3880
 3. PCA
 
 Principal Component Analysis was used to reduce the four numerical features into two principal components.
@@ -85,7 +83,7 @@ Rating < 4   → Not Highly Rated (0)
 
 Logistic Regression was used for classification evaluation.
 
-6.Model Evaluation
+**6.Model Evaluation**
 
 The following metrics were used:
 
@@ -134,16 +132,17 @@ Hierarchical Clustering	3	0.3880
 
 Based on the Silhouette Score, K-Means produced better clustering results than Hierarchical Clustering for this experiment.
 
-7.How to Run
+**7.requirements.txt**
 
-Step 1: Install required libraries
-pip install pandas numpy scikit-learn matplotlib seaborn
-Step 2: Keep the dataset in the project folder
-amazon(1).csv
-Step 3: Run the Python program
-python week3_unsupervised_ml.py
+pip install -r requirements.txt
 
-8.Conclusion
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+
+**8.Conclusion**
 
 This project provided practical experience in unsupervised learning and model evaluation. K-Means and Hierarchical Clustering were implemented to identify product groups. PCA was used for dimensionality reduction and visualization. Silhouette Score was used to compare clustering performance.
 
